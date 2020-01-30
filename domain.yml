@@ -1,0 +1,97 @@
+intents:
+  - greet
+  - affirm
+  - deny
+  - thankyou
+  - out_of_scope
+  - inform
+
+entities:
+  - weight
+  - height
+
+actions:
+  - utter_greet
+  - utter_goodbye
+  - utter_outscope
+  - utter_thanks
+  - utter_confirmation
+  - utter_continuation
+  - IMC_action
+  - utter_h
+  - utter_w
+  - utter_slim
+  - utter_perfect
+  - utter_littlebig
+  - utter_fat
+  - utter_wrong_num_weight
+  - utter_wrong_num_height
+
+forms:
+  - IMC_form
+  
+slots:
+  weight:
+    type: unfeaturized
+    # auto_fill: false
+  height:
+    type: unfeaturized
+    # auto_fill: false
+  
+templates:
+
+  utter_wrong_num_weight:
+    - text: "Weight should be a positive integer in Kg, please try again\n"
+
+  utter_wrong_num_height:
+    - text: "Weight should be a positive integer in centimeters, please try again\n"
+
+
+  utter_ask_weight:
+  - text: "I will need to know your weight in kg\n(if it's more than three digits please indicate that it's in kg)"
+  
+  utter_ask_height:
+  - text: "I will need to know your height in cm"
+  
+  utter_slim:
+    - text: "You should try to eat more Peter Anguila"
+
+  utter_perfect:
+    - text: "You are in perfect shape champion"
+      
+  utter_littlebig:
+    - text: "You are almost there, for once in your live would be great to have some responsibility and try to go for it"
+          
+  utter_fat:
+    - text: "You should try to go to the gym fatty"
+      
+
+  utter_greet:
+  - text: "Hey! Do you wanna know your IMC?"
+  
+  utter_thanks:
+  - text: "You're welcome"
+  
+  utter_goodbye:
+  - text: "Ok, bye :("
+
+  utter_outscope:
+  - text: "I'm sorry, I'm unable to answer that."
+
+  utter_confirmation:
+    - text: "Are you sure you want to stop?"
+
+  utter_continuation:
+    - text: "Do you want to continue?"
+
+  utter_h:
+    - text: "What is your height?"
+
+  utter_w:
+    - text: "What is your weight?"
+
+
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,180 @@
+## happy path
+* greet
+  - utter_greet
+* affirm
+  - utter_ask_weight
+* inform{"weight":"83"}
+  - utter_ask_height
+* inform{"height":"193"}
+  - IMC_action
+* thankyou
+  - utter_thanks
+
+## early stopping
+* greet
+  - utter_greet
+* deny
+  - utter_confirmation
+* affirm
+  - utter_goodbye
+
+## early stopping feint
+* greet
+  - utter_greet
+* deny
+  - utter_confirmation
+* deny
+  - utter_ask_weight
+* inform{"weight":"120"}
+  - utter_ask_height
+* inform{"height":"206"}
+  - IMC_action
+* thankyou
+  - utter_thanks
+
+## early divergence
+* greet
+  - utter_greet
+* out_of_scope
+  - utter_outscope
+  - utter_continuation
+* deny
+  - utter_goodbye
+
+## early divergence feint
+* greet
+  - utter_greet
+* out_of_scope
+  - utter_outscope
+  - utter_continuation
+* deny
+  - utter_ask_weight
+* inform{"weight":"50"}
+  - utter_ask_height
+* inform{"height":"171"}
+  - IMC_action
+* thankyou
+  - utter_thanks
+
+
+
+
+
+## ask weight stopping
+* greet
+  - utter_greet
+* affirm
+  - utter_ask_weight
+* deny
+  - utter_confirmation
+* affirm
+  - utter_goodbye
+
+## ask weight stopping feint
+* greet
+  - utter_greet
+* affirm
+  - utter_ask_weight
+* deny
+  - utter_confirmation
+* deny
+  - utter_ask_weight
+* inform{"weight":"34"}
+  - utter_ask_height
+* inform{"height":"134"}
+  - IMC_action
+* thankyou
+  - utter_thanks
+
+## ask weight divergence
+* greet
+  - utter_greet
+* affirm
+  - utter_ask_weight
+* out_of_scope
+  - utter_outscope
+  - utter_continuation
+* deny
+  - utter_goodbye
+
+## ask weight divergence feint
+* greet
+  - utter_greet
+* affirm
+  - utter_ask_weight
+* out_of_scope
+  - utter_outscope
+  - utter_continuation
+* deny
+  - utter_ask_weight
+* inform{"weight":"79"}
+  - utter_ask_height
+* inform{"height":"184"}
+  - IMC_action
+* thankyou
+  - utter_thanks
+
+
+
+
+
+
+
+
+## ask height stopping
+* greet
+  - utter_greet
+* affirm
+  - utter_ask_weight
+* inform{"weight":"97"}
+  - utter_ask_height
+* deny
+  - utter_confirmation
+* affirm
+  - utter_goodbye
+
+## ask height stopping feint
+* greet
+  - utter_greet
+* affirm
+  - utter_ask_weight
+* inform{"weight":"85"}
+  - utter_ask_height
+* deny
+  - utter_confirmation
+* deny
+  - utter_ask_height
+* inform{"height":"190"}
+  - IMC_action
+* thankyou
+  - utter_thanks
+
+## ask height divergence
+* greet
+  - utter_greet
+* affirm
+  - utter_ask_weight
+* inform{"weight":"120"}
+  - utter_ask_height
+* out_of_scope
+  - utter_outscope
+  - utter_continuation
+* deny
+  - utter_goodbye
+
+## ask height divergence feint
+* greet
+  - utter_greet
+* affirm
+  - utter_ask_weight
+* inform{"weight":"101"}
+  - utter_ask_height
+* out_of_scope
+  - utter_outscope
+  - utter_continuation
+* deny
+  - utter_ask_height
+* inform{"height":"199"}
+  - IMC_action
+* thankyou
+  - utter_thanks

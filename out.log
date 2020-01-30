@@ -1,0 +1,356 @@
+2020-01-27 11:24:34,896 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-01-27 11:25:56,098 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-01-27 11:26:01,932 [ERROR]  Could not load model due to device CUDA:0 not supported by XLA service
+	while setting up XLA_GPU_JIT device number 0.
+2020-01-27 11:26:01,932 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/app.py", line 1133, in run
+    serve(**server_settings)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/server.py", line 857, in serve
+    trigger_events(before_start, loop)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/server.py", line 634, in trigger_events
+    loop.run_until_complete(result)
+  File "uvloop/loop.pyx", line 1456, in uvloop.loop.Loop.run_until_complete
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/run.py", line 247, in load_agent_on_start
+    action_endpoint=endpoints.action,
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/agent.py", line 272, in load_agent
+    remote_storage=remote_storage,
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/agent.py", line 947, in load_local_model
+    path_to_model_archive=model_archive,
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/agent.py", line 387, in load
+    interpreter = NaturalLanguageInterpreter.create(nlu_model)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/interpreter.py", line 54, in create
+    return RasaNLUInterpreter(model_directory=obj)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/interpreter.py", line 272, in __init__
+    self._load_interpreter()
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/interpreter.py", line 295, in _load_interpreter
+    self.interpreter = Interpreter.load(self.model_directory)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/model.py", line 301, in load
+    return Interpreter.create(model_metadata, component_builder, skip_validation)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/model.py", line 328, in create
+    component_meta, model_metadata.model_dir, model_metadata, **context
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/components.py", line 456, in load_component
+    component_meta, model_dir, model_metadata, cached_component, **context
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/registry.py", line 211, in load_component_by_meta
+    component_meta, model_dir, metadata, cached_component, **kwargs
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/classifiers/embedding_intent_classifier.py", line 920, in load
+    session = tf.compat.v1.Session(config=_tf_config)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/tensorflow_core/python/client/session.py", line 1585, in __init__
+    super(Session, self).__init__(target, graph, config=config)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/tensorflow_core/python/client/session.py", line 699, in __init__
+    self._session = tf_session.TF_NewSessionRef(self._graph._c_graph, opts)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: device CUDA:0 not supported by XLA service
+	while setting up XLA_GPU_JIT device number 0
+2020-01-27 11:26:48,298 [INFO ]  Starting Rasa server on http://localhost:5050
+2020-01-27 11:26:54,104 [ERROR]  Could not load model due to device CUDA:0 not supported by XLA service
+	while setting up XLA_GPU_JIT device number 0.
+2020-01-27 11:26:54,105 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/app.py", line 1133, in run
+    serve(**server_settings)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/server.py", line 857, in serve
+    trigger_events(before_start, loop)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/server.py", line 634, in trigger_events
+    loop.run_until_complete(result)
+  File "uvloop/loop.pyx", line 1456, in uvloop.loop.Loop.run_until_complete
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/run.py", line 247, in load_agent_on_start
+    action_endpoint=endpoints.action,
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/agent.py", line 272, in load_agent
+    remote_storage=remote_storage,
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/agent.py", line 947, in load_local_model
+    path_to_model_archive=model_archive,
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/agent.py", line 387, in load
+    interpreter = NaturalLanguageInterpreter.create(nlu_model)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/interpreter.py", line 54, in create
+    return RasaNLUInterpreter(model_directory=obj)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/interpreter.py", line 272, in __init__
+    self._load_interpreter()
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/interpreter.py", line 295, in _load_interpreter
+    self.interpreter = Interpreter.load(self.model_directory)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/model.py", line 301, in load
+    return Interpreter.create(model_metadata, component_builder, skip_validation)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/model.py", line 328, in create
+    component_meta, model_metadata.model_dir, model_metadata, **context
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/components.py", line 456, in load_component
+    component_meta, model_dir, model_metadata, cached_component, **context
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/registry.py", line 211, in load_component_by_meta
+    component_meta, model_dir, metadata, cached_component, **kwargs
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/classifiers/embedding_intent_classifier.py", line 920, in load
+    session = tf.compat.v1.Session(config=_tf_config)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/tensorflow_core/python/client/session.py", line 1585, in __init__
+    super(Session, self).__init__(target, graph, config=config)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/tensorflow_core/python/client/session.py", line 699, in __init__
+    self._session = tf_session.TF_NewSessionRef(self._graph._c_graph, opts)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: device CUDA:0 not supported by XLA service
+	while setting up XLA_GPU_JIT device number 0
+2020-01-27 11:27:17,583 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-01-27 11:27:34,303 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-01-27 11:27:38,435 [ERROR]  Could not load model due to device CUDA:0 not supported by XLA service
+	while setting up XLA_GPU_JIT device number 0.
+2020-01-27 11:27:38,435 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/app.py", line 1133, in run
+    serve(**server_settings)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/server.py", line 857, in serve
+    trigger_events(before_start, loop)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/server.py", line 634, in trigger_events
+    loop.run_until_complete(result)
+  File "uvloop/loop.pyx", line 1456, in uvloop.loop.Loop.run_until_complete
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/run.py", line 247, in load_agent_on_start
+    action_endpoint=endpoints.action,
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/agent.py", line 272, in load_agent
+    remote_storage=remote_storage,
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/agent.py", line 947, in load_local_model
+    path_to_model_archive=model_archive,
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/agent.py", line 387, in load
+    interpreter = NaturalLanguageInterpreter.create(nlu_model)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/interpreter.py", line 54, in create
+    return RasaNLUInterpreter(model_directory=obj)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/interpreter.py", line 272, in __init__
+    self._load_interpreter()
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/interpreter.py", line 295, in _load_interpreter
+    self.interpreter = Interpreter.load(self.model_directory)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/model.py", line 301, in load
+    return Interpreter.create(model_metadata, component_builder, skip_validation)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/model.py", line 328, in create
+    component_meta, model_metadata.model_dir, model_metadata, **context
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/components.py", line 456, in load_component
+    component_meta, model_dir, model_metadata, cached_component, **context
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/registry.py", line 211, in load_component_by_meta
+    component_meta, model_dir, metadata, cached_component, **kwargs
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/classifiers/embedding_intent_classifier.py", line 920, in load
+    session = tf.compat.v1.Session(config=_tf_config)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/tensorflow_core/python/client/session.py", line 1585, in __init__
+    super(Session, self).__init__(target, graph, config=config)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/tensorflow_core/python/client/session.py", line 699, in __init__
+    self._session = tf_session.TF_NewSessionRef(self._graph._c_graph, opts)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: device CUDA:0 not supported by XLA service
+	while setting up XLA_GPU_JIT device number 0
+2020-01-27 11:27:52,070 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-01-27 11:27:56,487 [ERROR]  Could not load model due to device CUDA:0 not supported by XLA service
+	while setting up XLA_GPU_JIT device number 0.
+2020-01-27 11:27:56,488 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/app.py", line 1133, in run
+    serve(**server_settings)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/server.py", line 857, in serve
+    trigger_events(before_start, loop)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/server.py", line 634, in trigger_events
+    loop.run_until_complete(result)
+  File "uvloop/loop.pyx", line 1456, in uvloop.loop.Loop.run_until_complete
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/run.py", line 247, in load_agent_on_start
+    action_endpoint=endpoints.action,
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/agent.py", line 272, in load_agent
+    remote_storage=remote_storage,
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/agent.py", line 947, in load_local_model
+    path_to_model_archive=model_archive,
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/agent.py", line 387, in load
+    interpreter = NaturalLanguageInterpreter.create(nlu_model)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/interpreter.py", line 54, in create
+    return RasaNLUInterpreter(model_directory=obj)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/interpreter.py", line 272, in __init__
+    self._load_interpreter()
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/interpreter.py", line 295, in _load_interpreter
+    self.interpreter = Interpreter.load(self.model_directory)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/model.py", line 301, in load
+    return Interpreter.create(model_metadata, component_builder, skip_validation)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/model.py", line 328, in create
+    component_meta, model_metadata.model_dir, model_metadata, **context
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/components.py", line 456, in load_component
+    component_meta, model_dir, model_metadata, cached_component, **context
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/registry.py", line 211, in load_component_by_meta
+    component_meta, model_dir, metadata, cached_component, **kwargs
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/classifiers/embedding_intent_classifier.py", line 920, in load
+    session = tf.compat.v1.Session(config=_tf_config)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/tensorflow_core/python/client/session.py", line 1585, in __init__
+    super(Session, self).__init__(target, graph, config=config)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/tensorflow_core/python/client/session.py", line 699, in __init__
+    self._session = tf_session.TF_NewSessionRef(self._graph._c_graph, opts)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: device CUDA:0 not supported by XLA service
+	while setting up XLA_GPU_JIT device number 0
+2020-01-27 11:28:45,273 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-01-27 11:28:49,647 [ERROR]  Could not load model due to device CUDA:0 not supported by XLA service
+	while setting up XLA_GPU_JIT device number 0.
+2020-01-27 11:28:49,648 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/app.py", line 1133, in run
+    serve(**server_settings)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/server.py", line 857, in serve
+    trigger_events(before_start, loop)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/server.py", line 634, in trigger_events
+    loop.run_until_complete(result)
+  File "uvloop/loop.pyx", line 1456, in uvloop.loop.Loop.run_until_complete
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/run.py", line 247, in load_agent_on_start
+    action_endpoint=endpoints.action,
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/agent.py", line 272, in load_agent
+    remote_storage=remote_storage,
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/agent.py", line 947, in load_local_model
+    path_to_model_archive=model_archive,
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/agent.py", line 387, in load
+    interpreter = NaturalLanguageInterpreter.create(nlu_model)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/interpreter.py", line 54, in create
+    return RasaNLUInterpreter(model_directory=obj)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/interpreter.py", line 272, in __init__
+    self._load_interpreter()
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/interpreter.py", line 295, in _load_interpreter
+    self.interpreter = Interpreter.load(self.model_directory)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/model.py", line 301, in load
+    return Interpreter.create(model_metadata, component_builder, skip_validation)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/model.py", line 328, in create
+    component_meta, model_metadata.model_dir, model_metadata, **context
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/components.py", line 456, in load_component
+    component_meta, model_dir, model_metadata, cached_component, **context
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/registry.py", line 211, in load_component_by_meta
+    component_meta, model_dir, metadata, cached_component, **kwargs
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/classifiers/embedding_intent_classifier.py", line 920, in load
+    session = tf.compat.v1.Session(config=_tf_config)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/tensorflow_core/python/client/session.py", line 1585, in __init__
+    super(Session, self).__init__(target, graph, config=config)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/tensorflow_core/python/client/session.py", line 699, in __init__
+    self._session = tf_session.TF_NewSessionRef(self._graph._c_graph, opts)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: device CUDA:0 not supported by XLA service
+	while setting up XLA_GPU_JIT device number 0
+2020-01-27 11:29:43,625 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-01-27 11:29:47,669 [ERROR]  Could not load model due to device CUDA:0 not supported by XLA service
+	while setting up XLA_GPU_JIT device number 0.
+2020-01-27 11:29:47,669 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/app.py", line 1133, in run
+    serve(**server_settings)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/server.py", line 857, in serve
+    trigger_events(before_start, loop)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/server.py", line 634, in trigger_events
+    loop.run_until_complete(result)
+  File "uvloop/loop.pyx", line 1456, in uvloop.loop.Loop.run_until_complete
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/run.py", line 247, in load_agent_on_start
+    action_endpoint=endpoints.action,
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/agent.py", line 272, in load_agent
+    remote_storage=remote_storage,
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/agent.py", line 947, in load_local_model
+    path_to_model_archive=model_archive,
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/agent.py", line 387, in load
+    interpreter = NaturalLanguageInterpreter.create(nlu_model)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/interpreter.py", line 54, in create
+    return RasaNLUInterpreter(model_directory=obj)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/interpreter.py", line 272, in __init__
+    self._load_interpreter()
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/interpreter.py", line 295, in _load_interpreter
+    self.interpreter = Interpreter.load(self.model_directory)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/model.py", line 301, in load
+    return Interpreter.create(model_metadata, component_builder, skip_validation)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/model.py", line 328, in create
+    component_meta, model_metadata.model_dir, model_metadata, **context
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/components.py", line 456, in load_component
+    component_meta, model_dir, model_metadata, cached_component, **context
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/registry.py", line 211, in load_component_by_meta
+    component_meta, model_dir, metadata, cached_component, **kwargs
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/classifiers/embedding_intent_classifier.py", line 920, in load
+    session = tf.compat.v1.Session(config=_tf_config)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/tensorflow_core/python/client/session.py", line 1585, in __init__
+    super(Session, self).__init__(target, graph, config=config)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/tensorflow_core/python/client/session.py", line 699, in __init__
+    self._session = tf_session.TF_NewSessionRef(self._graph._c_graph, opts)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: device CUDA:0 not supported by XLA service
+	while setting up XLA_GPU_JIT device number 0
+2020-01-27 11:32:22,790 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-01-27 11:32:27,360 [ERROR]  Could not load model due to device CUDA:0 not supported by XLA service
+	while setting up XLA_GPU_JIT device number 0.
+2020-01-27 11:32:27,361 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/app.py", line 1133, in run
+    serve(**server_settings)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/server.py", line 857, in serve
+    trigger_events(before_start, loop)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/server.py", line 634, in trigger_events
+    loop.run_until_complete(result)
+  File "uvloop/loop.pyx", line 1456, in uvloop.loop.Loop.run_until_complete
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/run.py", line 247, in load_agent_on_start
+    action_endpoint=endpoints.action,
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/agent.py", line 272, in load_agent
+    remote_storage=remote_storage,
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/agent.py", line 947, in load_local_model
+    path_to_model_archive=model_archive,
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/agent.py", line 387, in load
+    interpreter = NaturalLanguageInterpreter.create(nlu_model)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/interpreter.py", line 54, in create
+    return RasaNLUInterpreter(model_directory=obj)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/interpreter.py", line 272, in __init__
+    self._load_interpreter()
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/core/interpreter.py", line 295, in _load_interpreter
+    self.interpreter = Interpreter.load(self.model_directory)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/model.py", line 301, in load
+    return Interpreter.create(model_metadata, component_builder, skip_validation)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/model.py", line 328, in create
+    component_meta, model_metadata.model_dir, model_metadata, **context
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/components.py", line 456, in load_component
+    component_meta, model_dir, model_metadata, cached_component, **context
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/registry.py", line 211, in load_component_by_meta
+    component_meta, model_dir, metadata, cached_component, **kwargs
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/rasa/nlu/classifiers/embedding_intent_classifier.py", line 920, in load
+    session = tf.compat.v1.Session(config=_tf_config)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/tensorflow_core/python/client/session.py", line 1585, in __init__
+    super(Session, self).__init__(target, graph, config=config)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/tensorflow_core/python/client/session.py", line 699, in __init__
+    self._session = tf_session.TF_NewSessionRef(self._graph._c_graph, opts)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: device CUDA:0 not supported by XLA service
+	while setting up XLA_GPU_JIT device number 0
+2020-01-27 11:40:05,488 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-01-27 11:40:10,987 [ERROR]  Unable to start server
+Traceback (most recent call last):
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/server.py", line 860, in serve
+    http_server = loop.run_until_complete(server_coroutine)
+  File "uvloop/loop.pyx", line 1456, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1727, in create_server
+OSError: [Errno 98] error while attempting to bind on address ('0.0.0.0', 5005): address already in use
+2020-01-27 11:41:20,081 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-01-27 11:41:25,565 [ERROR]  Unable to start server
+Traceback (most recent call last):
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/server.py", line 860, in serve
+    http_server = loop.run_until_complete(server_coroutine)
+  File "uvloop/loop.pyx", line 1456, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1727, in create_server
+OSError: [Errno 98] error while attempting to bind on address ('0.0.0.0', 5005): address already in use
+2020-01-27 11:42:08,471 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-01-27 11:42:14,026 [ERROR]  Unable to start server
+Traceback (most recent call last):
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/server.py", line 860, in serve
+    http_server = loop.run_until_complete(server_coroutine)
+  File "uvloop/loop.pyx", line 1456, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1727, in create_server
+OSError: [Errno 98] error while attempting to bind on address ('0.0.0.0', 5005): address already in use
+2020-01-27 11:42:45,985 [INFO ]  Starting Rasa server on http://localhost:5050
+2020-01-27 11:43:05,035 [INFO ]  Starting Rasa server on http://localhost:5055
+2020-01-27 11:43:12,332 [ERROR]  Unable to start server
+Traceback (most recent call last):
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/server.py", line 860, in serve
+    http_server = loop.run_until_complete(server_coroutine)
+  File "uvloop/loop.pyx", line 1456, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1727, in create_server
+OSError: [Errno 98] error while attempting to bind on address ('0.0.0.0', 5055): address already in use
+2020-01-27 11:44:37,218 [INFO ]  Starting Rasa server on http://localhost:5080
+2020-01-27 11:44:55,925 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-01-27 11:45:01,865 [ERROR]  Unable to start server
+Traceback (most recent call last):
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/server.py", line 860, in serve
+    http_server = loop.run_until_complete(server_coroutine)
+  File "uvloop/loop.pyx", line 1456, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1727, in create_server
+OSError: [Errno 98] error while attempting to bind on address ('0.0.0.0', 5005): address already in use
+2020-01-27 11:55:07,123 [ERROR]  Exception occurred while handling uri: 'http://localhost:5050/'
+Traceback (most recent call last):
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/app.py", line 918, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/router.py", line 447, in _get
+    raise method_not_supported
+sanic.exceptions.MethodNotSupported: Method POST not allowed for URL /
+2020-01-27 11:55:37,076 [ERROR]  Exception occurred while handling uri: 'http://localhost:5050/'
+Traceback (most recent call last):
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/app.py", line 918, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "/home/b.lgf/source/formExample/rasaForm2/lib/python3.6/site-packages/sanic/router.py", line 447, in _get
+    raise method_not_supported
+sanic.exceptions.MethodNotSupported: Method POST not allowed for URL /
